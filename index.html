@@ -13,6 +13,12 @@
   />
 </head>
 <body>
+  <!-- Simple Loading Screen -->
+  <div id="loader">
+    <div class="loader-dot"></div>
+    <p>Loading portfolio...</p>
+  </div>
+
   <!-- Navigation -->
   <header class="nav">
     <div class="nav-left">AG</div>
@@ -22,7 +28,8 @@
       <a href="#projects">projects</a>
       <a href="#skills">skills</a>
       <a href="#contact">contact</a>
-      <a href="GujralAditi copy.pdf" target="_blank" class="nav-resume">resume</a>
+      <!-- NOTE: either rename the file to GujralAditi.pdf or keep "copy" and this href -->
+      <a href="GujralAditi%20copy.pdf" target="_blank" class="nav-resume">resume</a>
     </nav>
   </header>
 
@@ -31,7 +38,9 @@
     <div class="hero-inner">
       <div class="hero-left">
         <p class="hero-eyebrow">Hi, I’m</p>
-        <h1 class="hero-title">Aditi Gujral</h1>
+        <h1 class="hero-title">
+          <span class="typing">Aditi Gujral</span>
+        </h1>
         <p class="hero-subtitle">
           Computer Science @ Western University · Minor in Software Engineering<br />
           Building full-stack tools, data pipelines, and AI-assisted systems for
@@ -60,7 +69,7 @@
   </section>
 
   <!-- About -->
-  <section id="about" class="section">
+  <section id="about" class="section reveal">
     <h2>About</h2>
     <p>
       I’m a third-year Computer Science student at Western University with a minor in
@@ -69,17 +78,17 @@
       healthcare and engineering.
     </p>
     <p>
-      I’ve worked as a Software Developer Intern, supported geotechnical research in my
+      I’ve worked as a Software Developer Intern, supported geotechnical research in a
       university lab, and contributed to an AI-assisted knee rehabilitation project.
       I love combining software, hardware, and data to build meaningful, impactful tools.
     </p>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="section">
+  <section id="experience" class="section reveal">
     <h2>Experience</h2>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="card-header">
         <h3>Software Developer Intern · AG Mobile Diagnostics</h3>
         <span>May 2024 – Sept 2024 · Toronto, ON</span>
@@ -100,7 +109,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="card-header">
         <h3>Geotech Engineer Laboratory Assistant · Western University</h3>
         <span>Dec 2024 – Present · London, ON</span>
@@ -120,7 +129,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="card-header">
         <h3>AI & Biomedical Software Team Member</h3>
         <span>Sept 2025 – Present</span>
@@ -141,7 +150,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="card-header">
         <h3>Aerobody Design Engineer · Sunstang Solar Car</h3>
         <span>Sept 2025 – Present · Western University</span>
@@ -163,10 +172,10 @@
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="section">
+  <section id="projects" class="section reveal">
     <h2>Selected Projects</h2>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="card-header">
         <h3>AI in Healthcare – Research</h3>
         <span>Python · Machine Learning</span>
@@ -184,7 +193,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="card-header">
         <h3>Integer to English Word Converter</h3>
         <span>C · Unix/Linux</span>
@@ -200,7 +209,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="card-header">
         <h3>Doubly Linked-List Text Editor</h3>
         <span>Java</span>
@@ -216,7 +225,7 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <div class="card-header">
         <h3>Sentiment Analysis Tool</h3>
         <span>Python · NLTK</span>
@@ -234,7 +243,7 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="section">
+  <section id="skills" class="section reveal">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div>
@@ -257,7 +266,7 @@
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section">
+  <section id="contact" class="section reveal">
     <h2>Contact</h2>
     <p>
       I’m always happy to connect about software, AI, engineering, or new opportunities.
@@ -269,5 +278,50 @@
   <footer class="footer">
     © 2025 · Built by Aditi Gujral
   </footer>
+
+  <!-- Animations & Interactions -->
+  <script>
+    // Hide loader when page is fully loaded
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      if (loader) {
+        loader.classList.add("hidden");
+      }
+
+      // Scroll reveal
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+      // 3D tilt on hero image
+      const frame = document.querySelector(".hero-image-frame");
+      if (frame) {
+        frame.addEventListener("mousemove", (e) => {
+          const rect = frame.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width;  // 0..1
+          const y = (e.clientY - rect.top) / rect.height; // 0..1
+          const rotateX = (0.5 - y) * 12;
+          const rotateY = (x - 0.5) * 12;
+          frame.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+          frame.classList.add("tilt-active");
+        });
+
+        frame.addEventListener("mouseleave", () => {
+          frame.style.transform = "rotateX(0deg) rotateY(0deg)";
+          frame.classList.remove("tilt-active");
+        });
+      }
+    });
+  </script>
 </body>
 </html>
