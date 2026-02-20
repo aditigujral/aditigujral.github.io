@@ -1,326 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <title>Aditi Gujral | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 </head>
+
 <body>
-  <!-- Simple Loading Screen -->
+  <!-- Loader -->
   <div id="loader">
     <div class="loader-dot"></div>
-    <p>Loading portfolio...</p>
+    <p>Loading…</p>
   </div>
 
-  <!-- Navigation -->
-  <header class="nav">
+  <!-- NAV -->
+  <nav class="nav">
     <div class="nav-left">AG</div>
-    <nav class="nav-links">
-      <a href="#about">about</a>
-      <a href="#experience">experience</a>
-      <a href="#projects">projects</a>
-      <a href="#skills">skills</a>
-      <a href="#contact">contact</a>
-      <!-- NOTE: either rename the file to GujralAditi.pdf or keep "copy" and this href -->
-      <a href="GujralAditi%20copy.pdf" target="_blank" class="nav-resume">resume</a>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-left">
-        <p class="hero-eyebrow">Hi, I’m</p>
-        <h1 class="hero-title">
-          <span class="typing">Aditi Gujral</span>
-        </h1>
-        <p class="hero-subtitle">
-          Computer Science @ Western University · Minor in Software Engineering<br />
-          Building full-stack tools, data pipelines, and AI-assisted systems for
-          healthcare and engineering.
-        </p>
-
-        <div class="hero-links">
-          <a href="mailto:agujral9@uwo.ca">Email</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
-      </div>
-
-      <div class="hero-right">
-        <div class="hero-image-frame">
-          <img
-            src="robotimage.png"
-            alt="Futuristic robot portrait"
-          />
-        </div>
-        <p class="hero-caption">
-          Technology that connects code, data, and machines.
-        </p>
-      </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#volunteering">Volunteering</a>
+      <a href="#contact">Contact</a>
     </div>
-  </section>
+  </nav>
 
-  <!-- About -->
-  <section id="about" class="section reveal">
+ 
+<div class="hero-inner">
+
+  <!-- LEFT SIDE -->
+  <div class="hero-left">
+    <p class="hero-eyebrow">Hi, I’m</p>
+
+    <h1 class="hero-title">
+      <span class="name-signature">Aditi Gujral</span>
+    </h1>
+
+    <div class="edu-badge">
+      Computer Science @ Western University · Minor in Software Engineering
+    </div>
+
+    <div class="hero-tagline">
+      <span class="tag-dot" aria-hidden="true"></span>
+      <span class="chip">Full-stack</span>
+      <span class="chip">Data</span>
+      <span class="chip">AI</span>
+      <span class="chip chip-accent">Security-minded</span>
+    </div>
+
+    <div class="hero-links">
+      <a class="btn primary" href="mailto:agujral9@uwo.ca">Email</a>
+      <a class="btn" href="https://www.linkedin.com/in/aditi-gujral-8463712b6/" target="_blank">LinkedIn</a>
+      <a class="btn" href="https://github.com/aditigujral" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="hero-right">
+    <div class="hero-card">
+      <h3>Currently</h3>
+      <p>3rd Year Computer Science @ Western University</p>
+
+      <h3>Focus</h3>
+      <p>Software - Data Science - FinTech</p>
+
+      <h3>Location</h3>
+      <p>Toronto, ON 🇨🇦</p>
+
+      <h3>Status</h3>
+      <p>Seeking Summer 2026 Internships 12-16 Months Availability</p>
+    </div>
+  </div>
+
+</div>
+      
+
+
+  <!-- ABOUT -->
+  <section class="section reveal" id="about">
     <h2>About</h2>
     <p>
-      I’m a third-year Computer Science student at Western University with a minor in
-      Software Engineering. I enjoy building software that gets used in the real world:
-      from responsive web platforms to low-level tools and AI-assisted systems in
-      healthcare and engineering.
-    </p>
-    <p>
-      I’ve worked as a Software Developer Intern, supported geotechnical research in a
-      university lab, and contributed to an AI-assisted knee rehabilitation project.
-      I love combining software, hardware, and data to build meaningful, impactful tools.
+      I am a Computer Science student at Western University with a minor in Software Engineering, focused on building robust, data-driven systems for complex, high-impact domains. I enjoy working across the full stack—from backend architecture and APIs to analytics and user-facing interfaces—ensuring that systems are scalable, secure, and resilient.
+
+I am especially interested in fintech and financial systems engineering, where precision, risk management, and data integrity are critical. I am motivated by opportunities to contribute to secure platforms that support intelligent decision-making, operational efficiency, and responsible innovation within the financial sector.
     </p>
   </section>
 
-  <!-- Experience -->
-  <section id="experience" class="section reveal">
-    <h2>Experience</h2>
+  
+  <!-- EXPERIENCE -->
+<section class="section reveal" id="experience">
+  <h2>Experience</h2>
 
-    <div class="card reveal">
-      <div class="card-header">
-        <h3>Software Developer Intern · AG Mobile Diagnostics</h3>
-        <span>May 2024 – Sept 2024 · Toronto, ON</span>
-      </div>
-      <p>
-        Developed a responsive web platform using HTML, CSS, and JavaScript to
-        streamline client access to diagnostic results, increasing client engagement.
-      </p>
-      <p>
-        Integrated front-end and back-end systems to enable seamless user data flow
-        and improve scalability for future product growth.
-      </p>
-      <ul class="tag-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Web Dev</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h3>Software Developer Intern · AG Mobile Diagnostics</h3>
+    <p class="meta">May 2024 – Sept 2024 · Toronto, ON</p>
+    <ul>
+      <li>Rebuilt data-driven workflows using React, TypeScript, and REST APIs for real-time synchronization.</li>
+      <li>Reduced manual data entry by <strong>41%</strong> and improved downstream reporting reliability.</li>
+      <li><strong>Impact:</strong> Increased platform engagement by <strong>27%</strong>.</li>
+    </ul>
+  </div>
 
-    <div class="card reveal">
-      <div class="card-header">
-        <h3>Geotech Engineer Laboratory Assistant · Western University</h3>
-        <span>Dec 2024 – Present · London, ON</span>
-      </div>
-      <p>
-        Collaborate with PhD students, professors, and industry partners at the
-        K.Y. Lo Geotechnical Research Centre to support soil and rock mechanics research.
-      </p>
-      <p>
-        Perform experimental testing and analysis of rock swelling and stress–strain
-        responses, working with structured datasets and technical reporting.
-      </p>
-      <ul class="tag-list">
-        <li>Data Analysis</li>
-        <li>Research</li>
-        <li>Engineering</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h3>Computer Science Tutor · Advance Tutoring</h3>
+    <p class="meta">May 2025 – Sept 2025</p>
+    <ul>
+      <li>Taught high school students coding fundamentals, debugging, and problem-solving.</li>
+      <li>Independently managed and instructed a group of 10+ students, maintaining engagement, discipline, and academic support.</li>
+      <li>Designed structured practice exercises, coding challenges, and mock assessments to reinforce problem-solving.</li>
+    </ul>
+  </div>
 
-    <div class="card reveal">
-      <div class="card-header">
-        <h3>AI & Biomedical Software Team Member</h3>
-        <span>Sept 2025 – Present</span>
-      </div>
-      <p>
-        Develop C/C++ software for real-time IMU data processing to improve
-        motion-feedback accuracy in AI-assisted knee rehabilitation.
-      </p>
-      <p>
-        Integrate Arduino modules to improve responsiveness and tracking stability,
-        working at the intersection of embedded systems and biomedical applications.
-      </p>
-      <ul class="tag-list">
-        <li>C/C++</li>
-        <li>Arduino</li>
-        <li>Real-time Data</li>
-        <li>Embedded</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h3>AI & Biomedical Software Team Member · Western University</h3>
+    <p class="meta">Sept 2025 – Present · London, ON</p>
+    <ul>
+      <li>Improved unreliable motion-tracking software by developing C/C++ real-time IMU processing pipelines, filtering sensor noise and stabilizing motion data streams.</li>
+      <li>Integrated Arduino modules to improve hardware–software communication and ensure consistent low-latency data.</li>
+      <li><strong>Impact:</strong> Improved reliability of datasets used in publications and industry-facing studies.</li>
+    </ul>
+  </div>
 
-    <div class="card reveal">
-      <div class="card-header">
-        <h3>Aerobody Design Engineer · Sunstang Solar Car</h3>
-        <span>Sept 2025 – Present · Western University</span>
-      </div>
-      <p>
-        Modify existing aerobody components and contribute to producing new parts
-        via resin infusion, targeting improved aerodynamic performance.
-      </p>
-      <p>
-        Design mounting systems for the aerobody to allow easier access to the
-        battery pack and internal mechanisms.
-      </p>
-      <ul class="tag-list">
-        <li>Design</li>
-        <li>Mechanical</li>
-        <li>Teamwork</li>
-      </ul>
-    </div>
-  </section>
+  <div class="card">
+    <h3>Geotech Engineer Laboratory Assistant · Western University</h3>
+    <p class="meta">Dec 2024 – Present · London, ON</p>
+    <ul>
+      <li>Analyzed and validated experimental datasets to ensure statistical consistency across trials.</li>
+      <li>Collaborated with researchers to verify data integrity and reproducibility.</li>
+      <li><strong>Impact:</strong> Improved reliability of datasets used in publications and industry-facing studies.</li>
+    </ul>
+  </div>
 
-  <!-- Projects -->
-  <section id="projects" class="section reveal">
-    <h2>Selected Projects</h2>
+</section>
 
-    <div class="card reveal">
-      <div class="card-header">
-        <h3>AI in Healthcare – Research</h3>
-        <span>Python · Machine Learning</span>
-      </div>
-      <p>
-        Researched applications of AI and machine learning in healthcare diagnostics,
-        analyzing datasets in Python to improve medical imaging accuracy and
-        predictive modeling.
-      </p>
-      <ul class="tag-list">
-        <li>Python</li>
-        <li>ML</li>
-        <li>Pandas</li>
-        <li>NumPy</li>
-      </ul>
-    </div>
 
-    <div class="card reveal">
-      <div class="card-header">
-        <h3>Integer to English Word Converter</h3>
-        <span>C · Unix/Linux</span>
-      </div>
-      <p>
-        Engineered a C-based integer-to-English word converter for educational tools
-        on Unix/Linux systems, with robust input validation and error handling.
-      </p>
-      <ul class="tag-list">
-        <li>C</li>
-        <li>Unix/Linux</li>
-        <li>Systems</li>
-      </ul>
-    </div>
+<!-- PROJECTS -->
+<section class="section reveal" id="projects">
+  <h2>Projects</h2>
 
-    <div class="card reveal">
-      <div class="card-header">
-        <h3>Doubly Linked-List Text Editor</h3>
-        <span>Java</span>
-      </div>
-      <p>
-        Built a Java-based text editor optimized for large text files using a
-        dynamic doubly-linked list to manage content efficiently.
-      </p>
-      <ul class="tag-list">
-        <li>Java</li>
-        <li>Data Structures</li>
-        <li>Algorithms</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h3>Doubly Linked-List Text Editor</h3>
+    <p class="meta">Python · Data Structures · NLP · July 2024</p>
+    <ul>
+      <li><strong>Built a Python-based NLP pipeline</strong> to clean, transform, and classify unstructured text using NLTK, pandas, and regex.</li>
+      <li><strong>Performed feature engineering and model tuning</strong> to improve prediction consistency across diverse text styles.</li>
+      <li><strong>Visualized sentiment distributions and model performance</strong> using Python dashboards.</li>
+      <li><strong>Impact:</strong> Achieved <strong>85% classification accuracy</strong> on benchmark datasets.</li>
+    </ul>
+  </div>
 
-    <div class="card reveal">
-      <div class="card-header">
-        <h3>Sentiment Analysis Tool</h3>
-        <span>Python · NLTK</span>
-      </div>
-      <p>
-        Created a Python sentiment analysis tool leveraging NLTK and pandas to
-        analyze text sentiment, achieving strong performance on standard datasets.
-      </p>
-      <ul class="tag-list">
-        <li>Python</li>
-        <li>NLTK</li>
-        <li>Data Processing</li>
-      </ul>
-    </div>
-  </section>
+  <div class="card">
+    <h3>Sentiment Analysis Tool</h3>
+    <p class="meta">Python · NLTK · June 2023</p>
+    <ul>
+      <li><strong>Identified performance bottlenecks</strong> in large-file text processing.</li>
+      <li><strong>Designed a custom doubly linked-list data structure</strong> optimized for insertion, deletion, and cursor operations.</li>
+      <li><strong>Impact:</strong> Reduced memory usage by <strong>31%</strong> compared to array-based editors.</li>
+    </ul>
+  </div>
 
-  <!-- Skills -->
-  <section id="skills" class="section reveal">
+  <div class="card">
+    <h3>Spotify → Apple Music Playlist Converter</h3>
+    <p class="meta">Python · APIs · Automation</p>
+    <ul>
+      <li>Built a tool to migrate playlists between platforms using API integrations and metadata mapping.</li>
+      <li>Handled edge cases like missing tracks, duplicates, and partial matches.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Data Science + ML Mini-Projects</h3>
+    <p class="meta">Pandas · NumPy · Scikit-learn</p>
+    <ul>
+      <li>Conducted EDA, feature engineering, clustering, and supervised learning workflows.</li>
+      <li>Focused on clean reporting and reproducible experiments.</li>
+    </ul>
+  </div>
+
+</section>
+ 
+
+
+
+  <!-- SKILLS -->
+  <section class="section reveal" id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
       <div>
-        <h3>Languages</h3>
-        <p>Java, C, Python, C#, ARM Assembly, R, SQL</p>
+        <h3>Programming</h3>
+        <p>Python, Java, C, C#, C++, SQL, R, ARM Assembly, LaTeX</p>
       </div>
       <div>
-        <h3>Web & UI</h3>
-        <p>HTML, CSS, JavaScript, Swift, UI/UX, Figma</p>
+        <h3>Web & Software</h3>
+        <p>HTML, CSS, JavaScript, Swift, React, Node.js</p>
       </div>
       <div>
-        <h3>Tools</h3>
-        <p>Git/GitHub, PyCharm, VS Code, Xcode, RStudio, Linux/Unix, Arduino IDE</p>
+        <h3>Tools & Platforms</h3>
+        <p>Git/GitHub, Linux/Unix, VS Code, PyCharm, Xcode, RStudio, IntelliJ</p>
       </div>
       <div>
-        <h3>Other</h3>
-        <p>Machine Learning, 3D Printing, SolidWorks, AutoCAD, Microsoft Office</p>
+        <h3>Data Science</h3>
+        <p>Pandas, NumPy, Polars, EDA, clustering, dimensionality reduction</p>
+      </div>
+      <div>
+        <h3>Machine Learning</h3>
+        <p>Supervised & unsupervised learning, neural networks, deep learning</p>
+      </div>
+      <div>
+        <h3>Design</h3>
+        <p>UI/UX, Figma, Adobe Creative Suite</p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section reveal">
+  <!-- VOLUNTEERING -->
+  <section class="section reveal" id="volunteering">
+    <h2>Volunteering</h2>
+    <div class="card">
+      <h3>Food Bank Organizer & Volunteer Lead · Sai Dham Food Bank</h3>
+      <p class="meta">Toronto, ON</p>
+      <ul>
+        <li>Coordinated end-to-end food distribution operations, overseeing intake, sorting, packaging, and distribution to ensure efficient service during high-demand periods.</li>
+        <li>Managed and led a team of 20+ volunteers, assigning roles based on strengths and workload, while maintaining smooth workflow and clear communication.</li>
+        <li>Monitored safety, crowd flow, and operational efficiency in real time, adapting distribution strategies to reduce bottlenecks and wait times.</li>
+        <li>Implemented structured task delegation and shift organization, improving service consistency during peak community turnout.</li>
+        <li>Supported a high-volume emergency food assistance program serving families across the GTA community.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section reveal" id="contact">
     <h2>Contact</h2>
     <p>
-      I’m always happy to connect about software, AI, engineering, or new opportunities.
       The best way to reach me is by email at
       <a href="mailto:agujral9@uwo.ca">agujral9@uwo.ca</a>.
     </p>
   </section>
 
-  <footer class="footer">
-    © 2025 · Built by Aditi Gujral
-  </footer>
+  <footer class="footer">© 2025 · Built by Aditi Gujral</footer>
 
-  <!-- Animations & Interactions -->
   <script>
-    // Hide loader when page is fully loaded
+    // loader
     window.addEventListener("load", () => {
       const loader = document.getElementById("loader");
-      if (loader) {
-        loader.classList.add("hidden");
-      }
+      if (loader) loader.classList.add("hidden");
+    });
 
-      // Scroll reveal
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.2 }
-      );
+    // scroll reveal
+    const revealEls = document.querySelectorAll(".reveal");
+    const revealObs = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("visible")),
+      { threshold: 0.14 }
+    );
+    revealEls.forEach((el) => revealObs.observe(el));
 
-      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    //  Ripple 
+    document.querySelectorAll(".btn").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const old = btn.querySelector(".ripple");
+        if (old) old.remove();
 
-      // 3D tilt on hero image
-      const frame = document.querySelector(".hero-image-frame");
-      if (frame) {
-        frame.addEventListener("mousemove", (e) => {
-          const rect = frame.getBoundingClientRect();
-          const x = (e.clientX - rect.left) / rect.width;  // 0..1
-          const y = (e.clientY - rect.top) / rect.height; // 0..1
-          const rotateX = (0.5 - y) * 12;
-          const rotateY = (x - 0.5) * 12;
-          frame.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-          frame.classList.add("tilt-active");
-        });
+        const circle = document.createElement("span");
+        circle.className = "ripple";
 
-        frame.addEventListener("mouseleave", () => {
-          frame.style.transform = "rotateX(0deg) rotateY(0deg)";
-          frame.classList.remove("tilt-active");
-        });
-      }
+        const rect = btn.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        circle.style.width = circle.style.height = `${size}px`;
+        circle.style.left = `${e.clientX - rect.left - size / 2}px`;
+        circle.style.top = `${e.clientY - rect.top - size / 2}px`;
+
+        btn.appendChild(circle);
+        circle.addEventListener("animationend", () => circle.remove());
+      });
     });
   </script>
 </body>
